@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>1.0.2</version>
+    <title>$title$</title>
+    <authors>shivamcv,rolandsmeenk,kprinssu</authors>
+    <owners>$author$</owners>
+    <projectUrl>https://github.com/kprinssu/Color_Picker</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Colour picker for UWP projects.</description>
+    <releaseNotes>Repackaged and updated version of a colour picker.</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>UWP XAML Colour Picker Color</tags>
+  </metadata>
+  <files>
+        <!-- The double wildcard will also grab all the resource files and the resource subdirectory. -->
+        <file src="\bin\Release\**" target="lib\uap10.0" />
+        <file src="\bin\Release\Color_Picker.xr.xml" target="lib\uap10.0\Color_Picker" />
+    </files>
+</package>

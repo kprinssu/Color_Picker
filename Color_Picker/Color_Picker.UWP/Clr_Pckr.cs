@@ -78,6 +78,8 @@ namespace Color_Picker
             ColorImg.PointerPressed += ColorImg_PointerPressed_1;
             ColorImg.PointerMoved += ColorImg_PointerMoved_1;
 
+            this.LostFocus += Clr_Pckr_LostFocus;
+
             gdStop.Color = SelectedColor;
             FinalColor.Fill = new SolidColorBrush(SelectedColor);
 
@@ -89,6 +91,11 @@ namespace Color_Picker
             px = p.X;
             py = p.Y;
             loadnew();
+        }
+
+        private void Clr_Pckr_LostFocus(object sender, RoutedEventArgs e)
+        {
+            this.ispressed = false;
         }
 
         bool loadedFlag = false;
