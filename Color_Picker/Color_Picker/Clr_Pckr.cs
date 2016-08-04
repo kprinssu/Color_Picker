@@ -80,7 +80,7 @@ namespace Color_Picker
             gdStop.Color = SelectedColor;
             FinalColor.Fill = new SolidColorBrush(SelectedColor);
 
-            this.LostFocus += Clr_Pckr_LostFocus;
+            this.PointerExited += Clr_Pckr_PointerExited;
 
             GeneralTransform gt = pointer.TransformToVisual(reference);
 
@@ -97,12 +97,11 @@ namespace Color_Picker
         {
             loadedFlag = true;
         }
-
-        private void Clr_Pckr_LostFocus(object sender, RoutedEventArgs e)
+        
+        private void Clr_Pckr_PointerExited(object sender, PointerRoutedEventArgs e)
         {
             this.ispressed = false;
         }
-
 
         private void ColorImg_PointerMoved_1(object sender, PointerRoutedEventArgs e)
         {
